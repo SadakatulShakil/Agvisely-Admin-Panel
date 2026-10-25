@@ -1,0 +1,57 @@
+name: agvisely_admin
+description: "Agvisely Admin — web admin panel for the DAE Agvisely app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+
+  # State / routing / DI — same stack as the mobile app
+  get: ^4.6.6
+
+  # Networking
+  http: ^1.2.2
+
+  # Session storage
+  shared_preferences: ^2.5.3
+  flutter_secure_storage: ^9.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+  fonts:
+    # Latin UI face from the admin Figma frames
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/Outfit-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Outfit-Regular.ttf
+        - asset: assets/fonts/Outfit-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Outfit-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Outfit-Bold.ttf
+          weight: 700
+    # Bangla fallback (advisory text) — same files as the mobile app
+    - family: AnekBangla
+      fonts:
+        - asset: assets/fonts/AnekBangla-Regular.ttf
+        - asset: assets/fonts/AnekBangla-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/AnekBangla-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/AnekBangla-Bold.ttf
+          weight: 700
